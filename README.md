@@ -1,4 +1,4 @@
-# Masked JavaScript Plugin
+# JavaScript Masked Plugin
 
 ## Setup
 ### Masked-install
