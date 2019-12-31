@@ -1,4 +1,5 @@
-# JavaScript Masked Plugin
+# Masked JavaScript Plugin
+The Masked JavaScript Plugin allows a user to more easily enter input.
 
 ## Setup
 ### Masked-install
