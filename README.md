@@ -17,6 +17,7 @@ addEventListener('DOMContentLoaded', function() {
    for (var i = 0; i < phone.length; i++) {
       masked(phone[i], "+7 (___) ___-__-__");
    }
+   //or
    masked(document.querySelector("#date"), "__/__/____");   
 });
 ```
