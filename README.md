@@ -1,42 +1,43 @@
 # Masked JavaScript Plugin
-The Masked JavaScript Plugin allows a user to more easily enter input.
+The Masked JavaScript Plugin allows the user to enter input data more easily.
 
-## Setup
+## Usage
 ### Masked-install
 **Folder install**
 
-First, download the file validator.js from the "install" folder. 
-Import the validator into your project.
-Next, call the validator function for those forms you wish to have validation.
+First, download the file masked.js from the "install" folder. 
+Import the masked into your project.
+Next, call the masked function and pass the desired input and pattern.
 
 ```js
-import validator from './validator';
+import masked from './masked.js';
 
 addEventListener('DOMContentLoaded', function() {
-   validator(document.querySelector('#form'));
+   var phone = document.querySelectorAll('[name="phone"]');
+   for (var i = 0; i < phone.length; i++) {
+      masked(phone[i], "+7 (___) ___-__-__");
+   }
+   masked(document.querySelector("#date"), "__/__/____");   
 });
 ```
 
 ### Masked-connections
 **Folder connections**
 
-First, download the file validator.js from the "connections" folder. 
-Include the validator.js to your project.
-Next, call the validator function for those forms you wish to have validation.
+First, download the file masked.js from the "connections" folder. 
+Include the masked.js to your project.
+Next, call the masked function and pass the desired input and pattern.
 
 ```js
-<script src="./validator.js"></script>
+<script src="./masked.js"></script>
 <script>
-   addEventListener('DOMContentLoaded', function () {
-      validator(document.querySelector('#form'));
+   window.addEventListener("DOMContentLoaded", function () {
+      var phone = document.querySelectorAll('[name="phone"]');
+      for (var i = 0; i < phone.length; i++) {
+         masked(phone[i], "+7 (___) ___-__-__");
+      }
+      //or
+      masked(document.querySelector("#date"), "__/__/____");
    });
 </script>
-```
-
-## Usage
-Set the name attribute for the items you wish to have validation.
-```html
-      <input type="text" name="name">
-      <input type="text" name="phone">
-      <input type="text" name="email">
 ```
